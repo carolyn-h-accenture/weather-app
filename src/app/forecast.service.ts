@@ -25,11 +25,11 @@ export class ForecastService {
         .set('lon', value.coords.longitude)
         .set('lat', value.coords.latitude)
         .set('units', 'imperial')
-        .set('appid', '')
+        .set('appid', '73d3cee72322c512646546f162d5afe5')
 
     }),
       switchMap((values) =>{
-        return this.http.get('https://api.openweather.org/data/2.5/forecast', { params: values })
+        return this.http.get('https://api.openweather.org/data/2.5/forecast/daily', { params: values })
       })
     )
   }
