@@ -24,7 +24,7 @@ export class ForecastService {
       return new HttpParams()
         .set('lon', -(value.coords.longitude))
         .set('lat', value.coords.latitude)
-        .set('units', 'metric')
+        .set('units', 'imperial')
         .set('appid', '73d3cee72322c512646546f162d5afe5')
 
     }),
